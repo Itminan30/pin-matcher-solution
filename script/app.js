@@ -8,3 +8,11 @@ function getPin(){
         return getPin();
     }
 }
+
+function displayPin(fieldId, pin){
+    document.getElementById(fieldId).value = pin;
+}
+
+document.getElementById('generate-pin').addEventListener('click', function(){
+    displayPin('display-pin', getPin());
+})
